@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Pomodoro Clock -- freeCodeCamp|Zipline</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css'>
+<link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!--<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg id="fcc-awesome-logo" width="100%" height="100%" viewBox="0 0 132 132" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"><g><g id="cert-inner-content"><g id="fcc-logo"><path d="M27.502,71.169c-4.167,-5.387 -6.018,-11.584 -5.539,-18.713c0.15,-2.623 0.661,-4.218 1.412,-4.798c0.272,-0.211 0.598,-0.354 0.961,-0.307c0.362,0.046 0.657,0.145 0.868,0.418c0.316,0.409 0.314,1.392 0.098,3.085c-0.986,6.757 0.624,12.924 4.896,18.447c4.748,6.137 10.644,9.532 17.621,10.238c1.399,0.117 2.283,0.415 2.652,0.892c0.211,0.273 0.286,0.651 0.239,1.014c-0.046,0.363 -0.213,0.71 -0.486,0.921c-0.955,0.738 -3.094,0.65 -6.487,-0.214c-6.385,-1.491 -11.751,-5.187 -16.235,-10.983Z" style="fill:#fff;fill-rule:nonzero;"/><path d="M80.175,32.601c4.167,5.387 6.019,11.584 5.539,18.713c-0.151,2.624 -0.662,4.218 -1.412,4.798c-0.272,0.211 -0.598,0.354 -0.961,0.308c-0.363,-0.047 -0.71,-0.214 -0.921,-0.487c-0.316,-0.409 -0.314,-1.392 -0.045,-3.017c0.986,-6.757 -0.624,-12.923 -4.897,-18.447c-4.747,-6.136 -10.644,-9.532 -17.62,-10.238c-1.399,-0.117 -2.283,-0.414 -2.652,-0.892c-0.211,-0.272 -0.286,-0.651 -0.24,-1.013c0.047,-0.363 0.214,-0.711 0.487,-0.921c0.886,-0.686 3.094,-0.65 6.487,0.213c6.37,1.612 11.804,5.256 16.235,10.983Z" style="fill:#fff;fill-rule:nonzero;"/><path d="M78.166,58.983l-23.661,18.304c-0.751,0.58 -1.907,0.494 -2.54,-0.324c-0.633,-0.818 -0.494,-1.907 0.324,-2.54l23.661,-18.304c0.75,-0.58 1.907,-0.494 2.54,0.324c0.633,0.819 0.494,1.907 -0.324,2.54" style="fill:#fff;fill-rule:nonzero;"/><path d="M37.665,41.305c0,0 3.026,-0.164 4.93,2.297c3.279,4.238 1.178,13.429 4.577,17.823c3.692,4.772 9.738,5.059 13.988,3.27c0.576,-0.269 0.351,-1.016 -0.376,-0.691c-1.696,0.759 -4.739,0.121 -7.013,-2.818c-2.089,-2.701 -0.29,-5.749 -0.255,-7.895c0.036,-2.181 -1.544,-3.69 -2.553,-3.707c-1.008,-0.016 -1.107,-1.002 0.645,-1.097c1.753,-0.093 3.815,0.662 4.567,2.342c0.957,2.141 2.329,2.727 3.36,2.129c1.03,-0.598 1.714,-1.867 0.935,-2.66c-0.779,-0.792 -2.005,-1.305 -1.694,-1.546c0.668,-0.516 3.363,0.045 5.364,2.631c2.02,2.612 1.271,6.091 1.142,7.281c-0.078,0.72 0.856,0.845 1.202,0.197c0.179,-0.336 0.499,-1.115 0.659,-1.648c0.763,-2.537 1.522,-7.047 -1.993,-11.591c-3.675,-4.75 -7.138,-5.487 -10.336,-5.868c-3.199,-0.382 -3.308,0.429 -2.119,0.908c3.615,1.455 3.368,3.082 2.226,3.965c-1.323,1.024 -3.739,-1.928 -6.035,-3.833c-5.096,-4.228 -10.391,-1.526 -11.305,-0.886c-0.915,0.641 -1.308,1.743 0.084,1.397" style="fill:#fff;fill-rule:nonzero;"/></g><g transform="matrix(0.593216,-0.458907,0.458907,0.593216,-450.216,272.555)"><text x="654.381px" y="228.062px" style="font-family:Oswald;font-size:14.667px;font-weight:700;fill:#fff;">CE<tspan x="669.245px 677.353px 683.979px 688.192px 694.395px 698.608px 704.991px 713.4px 716.409px 725.227px 733.335px 742.275px 750.347px 758.821px 763.034px " y="228.062px 228.062px 228.062px 228.062px 228.062px 228.062px 228.062px 228.062px 228.062px 228.062px 228.062px 228.062px 228.062px 228.062px 228.062px ">RTIFIED ORGANIC</tspan></text><text x="694.93px" y="250.048px" style="font-family:Oswald;font-size:14.667px;font-weight:700;fill:#fff;">10<tspan x="708.06px " y="250.048px ">0</tspan>%</text></g><g transform="matrix(0.593216,-0.458907,0.458907,0.593216,-183.966,82.48)"><g transform="matrix(0.725289,-0.688445,0.688445,0.725289,-30.4624,190.888)"><text x="223.958px" y="133.615px" style="font-family:Oswald;font-size:9px;font-weight:700;fill:#fff;">F</text></g><g transform="matrix(0.800075,-0.5999,0.5999,0.800075,-30.8748,163.608)"><text x="230.025px" y="128.126px" style="font-family:Oswald;font-size:9px;font-weight:700;fill:#fff;">R</text></g><g transform="matrix(0.864622,-0.502422,0.502422,0.864622,-29.4905,136.021)"><text x="237.659px" y="122.734px" style="font-family:Oswald;font-size:9px;font-weight:700;fill:#fff;">E</text></g><g transform="matrix(0.91491,-0.403658,0.403658,0.91491,-27.1004,108.974)"><text x="244.93px" y="118.768px" style="font-family:Oswald;font-size:9px;font-weight:700;fill:#fff;">E</text></g><g transform="matrix(0.977231,-0.212177,0.212177,0.977231,-18.2663,57.4485)"><text x="258.542px" y="113.834px" style="font-family:Oswald;font-size:9px;font-weight:700;fill:#fff;">C</text></g><g transform="matrix(0.996411,-0.0846414,0.0846414,0.996411,-8.52431,23.0833)"><text x="267.967px" y="112.072px" style="font-family:Oswald;font-size:9px;font-weight:700;fill:#fff;">O</text></g><g transform="matrix(0.999067,0.0431799,-0.0431799,0.999067,5.07496,-11.8884)"><text x="277.732px" y="111.532px" style="font-family:Oswald;font-size:9px;font-weight:700;fill:#fff;">D</text></g><g transform="matrix(0.986647,0.162872,-0.162872,0.986647,22.1146,-45.2838)"><text x="287.234px" y="112.23px" style="font-family:Oswald;font-size:9px;font-weight:700;fill:#fff;">E</text></g><g transform="matrix(0.93395,0.357405,-0.357405,0.93395,61.204,-100.069)"><text x="301.342px" y="115.556px" style="font-family:Oswald;font-size:9px;font-weight:700;fill:#fff;">C</text></g><g transform="matrix(0.881575,0.472044,-0.472044,0.881575,93.0198,-132.296)"><text x="310.178px" y="119.241px" style="font-family:Oswald;font-size:9px;font-weight:700;fill:#fff;">A</text></g><g transform="matrix(0.810169,0.586196,-0.586196,0.810169,133.029,-163.065)"><text x="318.287px" y="123.863px" style="font-family:Oswald;font-size:9px;font-weight:700;fill:#fff;">M</text></g><g transform="matrix(0.724904,0.68885,-0.68885,0.724904,179.837,-189.274)"><text x="326.893px" y="130.522px" style="font-family:Oswald;font-size:9px;font-weight:700;fill:#fff;">P</text></g></g><g transform="matrix(0.593216,-0.458907,0.458907,0.593216,-183.966,82.48)"><g transform="matrix(0.608536,0.793526,-0.793526,0.608536,268.847,-74.4036)"><text x="209.835px" y="235.285px" style="font-family:Oswald;font-size:9px;font-weight:700;fill:#fff;">F</text></g><g transform="matrix(0.696234,0.717815,-0.717815,0.696234,239.461,-81.1247)"><text x="215.582px" y="242.367px" style="font-family:Oswald;font-size:9px;font-weight:700;fill:#fff;">R</text></g><g transform="matrix(0.775,0.631961,-0.631961,0.775,207.867,-84.7696)"><text x="222.981px" y="249.535px" style="font-family:Oswald;font-size:9px;font-weight:700;fill:#fff;">E</text></g><g transform="matrix(0.839714,0.543029,-0.543029,0.839714,175.444,-84.1439)"><text x="230.256px" y="255.119px" style="font-family:Oswald;font-size:9px;font-weight:700;fill:#fff;">E</text></g><g transform="matrix(0.897603,0.440805,-0.440805,0.897603,138.96,-78.3684)"><text x="238.162px" y="259.917px" style="font-family:Oswald;font-size:9px;font-weight:700;fill:#fff;">C</text></g><g transform="matrix(0.946964,0.321338,-0.321338,0.946964,98.0706,-65.6251)"><text x="247.844px" y="264.289px" style="font-family:Oswald;font-size:9px;font-weight:700;fill:#fff;">O</text></g><g transform="matrix(0.98078,0.195117,-0.195117,0.98078,57.1434,-45.246)"><text x="258.235px" y="267.43px" style="font-family:Oswald;font-size:9px;font-weight:700;fill:#fff;">D</text></g><g transform="matrix(0.997155,0.075379,-0.075379,0.997155,21.0515,-19.4819)"><text x="268.611px" y="269.137px" style="font-family:Oswald;font-size:9px;font-weight:700;fill:#fff;">E</text></g><g transform="matrix(0.999183,-0.0404098,0.0404098,0.999183,-10.6664,11.4473)"><text x="277.832px" y="269.572px" style="font-family:Oswald;font-size:9px;font-weight:700;fill:#fff;">C</text></g><g transform="matrix(0.986325,-0.164811,0.164811,0.986325,-40.3578,51.2054)"><text x="288.389px" y="268.802px" style="font-family:Oswald;font-size:9px;font-weight:700;fill:#fff;">A</text></g><g transform="matrix(0.95486,-0.297057,0.297057,0.95486,-65.7627,100.754)"><text x="298.637px" y="266.761px" style="font-family:Oswald;font-size:9px;font-weight:700;fill:#fff;">M</text></g><g transform="matrix(0.906074,-0.42312,0.42312,0.906074,-82.0827,155.825)"><text x="309.939px" y="262.796px" style="font-family:Oswald;font-size:9px;font-weight:700;fill:#fff;">P</text></g><g transform="matrix(0.863958,-0.503564,0.503564,0.863958,-87.1205,195.248)"><text x="317.798px" y="258.864px" style="font-family:Oswald;font-size:9px;font-weight:700;fill:#fff;">.</text></g><g transform="matrix(0.803984,-0.594651,0.594651,0.803984,-87.9901,242.777)"><text x="324.259px" y="254.855px" style="font-family:Oswald;font-size:9px;font-weight:700;fill:#fff;">C</text></g><g transform="matrix(0.721691,-0.692215,0.692215,0.721691,-79.3016,299.316)"><text x="332.582px" y="248.278px" style="font-family:Oswald;font-size:9px;font-weight:700;fill:#fff;">O</text></g><g transform="matrix(0.620322,-0.784347,0.784347,0.620322,-59.4521,358.151)"><text x="340.213px" y="240.484px" style="font-family:Oswald;font-size:9px;font-weight:700;fill:#fff;">M</text></g></g></g></g></svg>
+-->
+<main>
+	
+	<header>
+		<h1 id="title-element">Tomato Timer</h1>
+	</header>
+	<section class="timer">
+		<div class="timer__container">
+			<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+			<svg id="tomato" width="100%" height="100%" viewBox="0 0 165 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"><g><g id="Path-12"><g>
+				<path id="tomato-body-green" d="M68.144,15.65c-2.07,0.46 -18.818,0.002 -31.643,14.915c-1.097,1.275 -3.448,3.834 -3.448,3.834c-13.631,9.847 -28.061,40.911 -6.025,73.919c31.703,47.487 92.99,19.021 95.983,17.031c4.873,-3.242 29.941,-17.023 26.7,-56.437c-3.241,-39.413 -34.127,-47.07 -34.127,-47.07c0,0 -9.331,-4.604 -18.734,-3.534c-9.402,1.07 -10.264,-1.186 -10.264,-1.186c0,0 -10.523,-2.726 -18.442,-1.472Z" style="fill:url(#_Linear2);"/>
+				<path id="tomato-body-red" d="M68.144,15.65c-2.07,0.46 -18.818,0.002 -31.643,14.915c-1.097,1.275 -3.448,3.834 -3.448,3.834c-13.631,9.847 -28.061,40.911 -6.025,73.919c31.703,47.487 92.99,19.021 95.983,17.031c4.873,-3.242 29.941,-17.023 26.7,-56.437c-3.241,-39.413 -34.127,-47.07 -34.127,-47.07c0,0 -9.331,-4.604 -18.734,-3.534c-9.402,1.07 -10.264,-1.186 -10.264,-1.186c0,0 -10.523,-2.726 -18.442,-1.472Z" style="fill:url(#_Linear1);"/>
+				</g></g><g id="Stalk"><g id="Glare"><path id="Path-6" d="M66.554,54.991c-15.176,-3.858 -28.729,-15.366 -33.064,-12.229c-19.495,14.108 56.327,29.321 66.212,15.917c2.232,-3.027 -18.381,0.066 -33.148,-3.688Z" style="fill:url(#_Radial2);"/><path id="Path-11" d="M82.046,24.784c2.308,7.673 23.05,14.38 23.05,14.38c0,0 13.797,0.678 11.096,-5.247c-2.702,-5.926 -15.574,-11.344 -23.065,-11.344c-7.491,0 -8.773,0 -11.081,2.211Z" style="fill:url(#_Radial3);"/></g><g id="Shadows"><path id="Path-7" d="M78.795,44.197c-6.081,0.925 -9.991,1.535 -14.715,-0.285c-4.725,-1.819 -19.378,1.378 -24.869,12.352c-5.491,10.974 4.765,-15.558 15.975,-17.759c11.21,-2.202 17.151,-1.252 17.151,-1.252l37.614,2.867c0,0 15.219,2.484 19.882,14.507c4.663,12.022 -6.529,-12.337 -26.43,-11.355c-12.995,0.64 -4.891,12.409 -7.722,26.095c-3.736,-12.638 -10.805,-26.095 -16.886,-25.17Z" style="fill:url(#_Radial4);"/><path id="Path-8" d="M110.123,35.813c1.43,-3.172 5.198,-7.471 14.793,-6.832c-4.517,-2.096 -9.405,-4.58 -14.228,-2.081c-4.824,2.499 -13.181,9.268 -13.181,9.268c0,0 3.641,1.998 12.616,-0.355Z" style="fill:url(#_Radial5);"/><path id="Path-9" d="M66.885,32.984c0,0 -5.306,-4.543 -14.806,-5.759c4.073,-2.925 7.759,-1.774 12.28,-0.329c4.52,1.446 6.72,7.25 6.72,7.25l-4.194,-1.162Z" style="fill:url(#_Radial6);"/><path id="Path-10" d="M72.34,29.983c0,0 0.796,-10.081 -14.312,-9.272c7.008,-1.107 12,-1.317 15.303,0c3.303,1.318 2.61,11.603 2.61,11.603l-3.601,-2.331Z" style="fill:url(#_Radial7);"/></g><g id="Greenery"><path id="Path-4" d="M67.995,33.357c-3.765,-3.533 -8.247,-7.193 -12.507,-10.883c-4.25,-3.682 -8.28,-7.398 -9.804,-8.448c1.058,0.175 5.884,3.718 11.026,7.687c6.761,5.219 14.067,11.174 14.067,11.174c0,0 -1.247,1.298 -2.782,0.47Z" style="fill:#7d8531;"/><path id="Path-5" d="M154.127,43.617c-16.674,-4.254 -32.778,-4.578 -43.571,-3.675c-5.375,0.449 -7.724,1.489 -11.595,1.935c-3.871,0.445 -11.73,0.82 -12.403,1.003c-1.905,0.519 -11.447,-0.301 -17.251,-3.203c-5.804,-2.902 -9.101,-6.359 -20.89,-6.968c-11.789,-0.608 -26.659,5.187 -26.659,5.187c0,0 16.284,-9.805 28.216,-7.114c10.79,1.369 37.937,6.462 37.937,6.462c0,0 48.982,-2.27 66.216,6.373Z" style="fill:#7d8531;"/><path id="Path-1" d="M101.887,35.594c12.705,-10.866 40.565,-32.091 47.579,-23.92c-5.059,-11.148 -55.555,19.448 -55.555,19.448c0,0 -10.057,-5.279 -10.057,-5.279c-20.988,-34.665 -34.5,-27.246 -35.923,-17.671c-0.297,2.146 0.705,6.105 3.478,4.631c-5.034,-0.752 -1.517,-7.84 -0.834,-8.606c12.633,-12.066 23.131,23.082 23.677,25.759c-5.431,-1.203 -15.101,-7.428 -22.025,-13.747c-6.5,-5.93 -15.099,-3.406 -15.099,-3.406c4.864,0 8.905,0 15.099,5.75c7.291,6.768 8.464,6.809 16.628,14.796c-9.42,-2.337 -21.816,-5.088 -31.727,-2.337c-9.912,2.751 -14.19,5.102 -17.805,7.663c8.336,-1.91 16.755,-11.383 40.688,-5.857c11.934,2.813 13.398,3.986 18.622,5.857c0,0 2.631,-2.302 6.472,1.085c4.303,7.863 6.757,13.72 13.286,21.21c0,-11.146 -5.213,-19.885 -3.008,-21.21c7.734,-1.577 21.277,-1.486 30.683,-1.085c17.648,0.752 31.296,4.366 39,12.559c-15.6,-16.523 -33.9,-15.027 -63.179,-15.64Z" style="fill:#b9c261;"/><path id="Path-2" d="M93.95,31.309l-0.45,4.167c0,0 -0.415,1.013 -2.275,1.013c-1.859,0 -2.898,-0.515 -4.545,-0.515c-1.648,0 -4.288,0.232 -4.821,0.232c-0.532,0 -0.788,-2.678 -0.394,-4.157c0.394,-1.48 2.617,-6.734 2.617,-6.734c0,0 2.161,-6.254 2.161,-9.367c-0.195,1.883 2.797,2.768 3.943,3.098c1.147,0.33 6.262,0.805 6.262,-1.955c-0.254,1.775 -0.08,1.393 -1.687,3.811c-1.608,2.417 -0.811,10.407 -0.811,10.407Z" style="fill:url(#_Linear8);"/><path id="Path-3" d="M86.216,15.989c0,-1.007 1.001,-4.504 5.945,-2.77c4.552,1.948 4.316,3.733 4.316,3.985c-0.131,1.94 -2.353,2.589 -5.121,2.428c-2.769,-0.161 -5.252,-1.164 -5.14,-3.643Z" style="fill:#b9c261;"/></g></g></g><defs>
+				<linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(5.53044e-15,90.319,-90.319,5.53044e-15,96.5186,17.4589)"><stop offset="0%" style="stop-color:#f34830;stop-opacity:1"/><stop offset="100%" style="stop-color:#ff6f55;stop-opacity:0"/></linearGradient>
+				<linearGradient id="_Linear2" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(5.53044e-15,90.319,-90.319,5.53044e-15,96.5186,17.4589)"><stop offset="0%" style="stop-color:#9DAF62;stop-opacity:1"/><stop offset="100%" style="stop-color:#9DAF62;stop-opacity:0"/></linearGradient>
+				<radialGradient id="_Radial2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(204.227,0,0,204.227,30.3,63.8633)"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.12549"/><stop offset="100%" style="stop-color:#ff674c;stop-opacity:0.0196078"/></radialGradient><radialGradient id="_Radial3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(101.269,0,0,101.269,82.0457,39.188)"><stop offset="0%" style="stop-color:#fff;stop-opacity:0.12549"/><stop offset="100%" style="stop-color:#ff674c;stop-opacity:0.0196078"/></radialGradient><radialGradient id="_Radial4" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(402.626,0,0,402.626,177.888,81.9518)"><stop offset="0%" style="stop-color:#000;stop-opacity:0"/><stop offset="100%" style="stop-color:#e45c43;stop-opacity:0.25098"/></radialGradient><radialGradient id="_Radial5" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(118.407,0,0,118.407,138.739,41.2851)"><stop offset="0%" style="stop-color:#000;stop-opacity:0"/><stop offset="100%" style="stop-color:#e45c43;stop-opacity:0.25098"/></radialGradient><radialGradient id="_Radial6" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(82.0797,0,0,82.0797,80.6609,37.549)"><stop offset="0%" style="stop-color:#000;stop-opacity:0"/><stop offset="100%" style="stop-color:#e45c43;stop-opacity:0.25098"/></radialGradient><radialGradient id="_Radial7" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(77.6458,0,0,77.6458,85.0664,37.1873)"><stop offset="0%" style="stop-color:#000;stop-opacity:0"/><stop offset="100%" style="stop-color:#e45c43;stop-opacity:0.25098"/></radialGradient><linearGradient id="_Linear8" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(8.43364,15.9422,-15.9422,8.43364,84.7897,20.547)"><stop offset="0%" style="stop-color:#b9c261;stop-opacity:1"/><stop offset="100%" style="stop-color:#99a14b;stop-opacity:1"/></linearGradient></defs></svg>
+
+			<div class="timer__countdown-container cf">
+				<button class="timer__button timer__button--left" id="timer-decrease"><i class="ion-ios-minus-empty"></i></button>
+				<button class="timer__button timer__button--right" id="timer-increase"><i class="ion-ios-plus-empty"></i></button>
+				<div class="timer__countdown" id="timer-countdown">
+					<span class="timer__countdown-char">2</span><span class="timer__countdown-char">5</span>:<span class="timer__countdown-char">0</span><span class="timer__countdown-char">0</span>
+				</div>
+
+			</div>
+
+			<div class="timer__controls">
+				<div class="timer__controls-slider">
+					<input class="timer__controls-slider-checkbox" type="checkbox" value="break" name="session-type-checkbox" id="session-type-checkbox" />
+					<label class="timer__controls-slider-label" for="session-type-checkbox"></label>
+				</div>
+			</div>
+			<div class="timer__controls">
+				<button class="timer__button paused initial-play-state" id="btn-play-control"><i class="timer__button--play ion-ios-play-outline"></i><i class=" timer__button--paused ion-ios-pause-outline"></i></button>
+				<button class="timer__button" id="btn-restart"><i class="ion-ios-refresh-empty"></i></button>
+			</div>
+
+		</div>
+	</section>
+	<section class="tick-marks">
+		<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+		<svg id="timer-ticks" width="100%" height="100px" viewBox="1695 0 2000 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+				<!-- Generator: Sketch 3.4.3 (16044) - http://www.bohemiancoding.com/sketch -->
+				<title>tomato-timer-marks</title>
+				<desc>Created with Sketch.</desc>
+				<defs></defs>
+				<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+						<g id="Tomato-Timer-Marks" sketch:type="MSArtboardGroup">
+								<g id="mark-container" sketch:type="MSLayerGroup" transform="translate(773.000000, 0.000000)">
+										<g id="Group" transform="translate(1800.000000, 0.000000)">
+												<g transform="translate(150.000000, 44.000000)" id="Line" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" stroke-width="6"></path>
+														<path d="M1,7 L1,37" stroke-width="3"></path>
+														<path d="M31,7 L31,37" stroke-width="3"></path>
+														<path d="M61,7 L61,37" stroke-width="3"></path>
+														<path d="M91,7 L91,37" stroke-width="3"></path>
+												</g>
+												<g id="Group-Copy" transform="translate(300.000000, 44.000000)" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" id="Line" stroke-width="6"></path>
+														<path d="M1,7 L1,37" id="Line" stroke-width="3"></path>
+														<path d="M31,7 L31,37" id="Line" stroke-width="3"></path>
+														<path d="M61,7 L61,37" id="Line" stroke-width="3"></path>
+														<path d="M91,7 L91,37" id="Line" stroke-width="3"></path>
+												</g>
+												<g id="Group-Copy-2" transform="translate(450.000000, 44.000000)" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" id="Line" stroke-width="6"></path>
+														<path d="M1,7 L1,37" id="Line" stroke-width="3"></path>
+														<path d="M31,7 L31,37" id="Line" stroke-width="3"></path>
+														<path d="M61,7 L61,37" id="Line" stroke-width="3"></path>
+														<path d="M91,7 L91,37" id="Line" stroke-width="3"></path>
+												</g>
+												<g id="Group-Copy-3" transform="translate(600.000000, 44.000000)" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" id="Line" stroke-width="6"></path>
+														<path d="M1,7 L1,37" id="Line" stroke-width="3"></path>
+														<path d="M31,7 L31,37" id="Line" stroke-width="3"></path>
+														<path d="M61,7 L61,37" id="Line" stroke-width="3"></path>
+														<path d="M91,7 L91,37" id="Line" stroke-width="3"></path>
+												</g>
+												<g id="Group-Copy-3" transform="translate(750.000000, 44.000000)" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" id="Line" stroke-width="6"></path>
+														<path d="M1,7 L1,37" id="Line" stroke-width="3"></path>
+														<path d="M31,7 L31,37" id="Line" stroke-width="3"></path>
+														<path d="M61,7 L61,37" id="Line" stroke-width="3"></path>
+														<path d="M91,7 L91,37" id="Line" stroke-width="3"></path>
+												</g>
+												<g id="Group-Copy-3" transform="translate(900.000000, 44.000000)" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" id="Line" stroke-width="6"></path>
+														<path d="M1,7 L1,37" id="Line" stroke-width="3"></path>
+														<path d="M31,7 L31,37" id="Line" stroke-width="3"></path>
+														<path d="M61,7 L61,37" id="Line" stroke-width="3"></path>
+														<path d="M91,7 L91,37" id="Line" stroke-width="3"></path>
+												</g>
+												<g id="Group-Copy-3" transform="translate(1050.000000, 44.000000)" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" id="Line" stroke-width="6"></path>
+														<path d="M1,7 L1,37" id="Line" stroke-width="3"></path>
+														<path d="M31,7 L31,37" id="Line" stroke-width="3"></path>
+														<path d="M61,7 L61,37" id="Line" stroke-width="3"></path>
+														<path d="M91,7 L91,37" id="Line" stroke-width="3"></path>
+												</g>
+												<g id="Group-Copy-3" transform="translate(1200.000000, 44.000000)" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" id="Line" stroke-width="6"></path>
+														<path d="M1,7 L1,37" id="Line" stroke-width="3"></path>
+														<path d="M31,7 L31,37" id="Line" stroke-width="3"></path>
+														<path d="M61,7 L61,37" id="Line" stroke-width="3"></path>
+														<path d="M91,7 L91,37" id="Line" stroke-width="3"></path>
+												</g>
+												<g id="Group-Copy-3" transform="translate(1350.000000, 44.000000)" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" id="Line" stroke-width="6"></path>
+														<path d="M1,7 L1,37" id="Line" stroke-width="3"></path>
+														<path d="M31,7 L31,37" id="Line" stroke-width="3"></path>
+														<path d="M61,7 L61,37" id="Line" stroke-width="3"></path>
+														<path d="M91,7 L91,37" id="Line" stroke-width="3"></path>
+												</g>
+												<g id="Group-Copy-3" transform="translate(1500.000000, 44.000000)" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" id="Line" stroke-width="6"></path>
+														<path d="M1,7 L1,37" id="Line" stroke-width="3"></path>
+														<path d="M31,7 L31,37" id="Line" stroke-width="3"></path>
+														<path d="M61,7 L61,37" id="Line" stroke-width="3"></path>
+														<path d="M91,7 L91,37" id="Line" stroke-width="3"></path>
+												</g>
+												<g id="Group-Copy-3" transform="translate(1650.000000, 44.000000)" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" id="Line" stroke-width="6"></path>
+														<path d="M1,7 L1,37" id="Line" stroke-width="3"></path>
+														<path d="M31,7 L31,37" id="Line" stroke-width="3"></path>
+														<path d="M61,7 L61,37" id="Line" stroke-width="3"></path>
+														<path d="M91,7 L91,37" id="Line" stroke-width="3"></path>
+												</g>
+												<text id="5" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="264.223389" y="31">5</tspan>
+												</text>
+												<text id="10" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="405.446777" y="31">10</tspan>
+												</text>
+												<text id="15" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="555.446777" y="31">15</tspan>
+												</text>
+												<text id="20" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="705.446777" y="31">20</tspan>
+												</text>
+												<text id="25" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="855.446777" y="31">25</tspan>
+												</text>
+												<text id="30" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="1005.44678" y="31">30</tspan>
+												</text>
+												<text id="35" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="1155.44678" y="31">35</tspan>
+												</text>
+												<text id="40" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="1305.44678" y="31">40</tspan>
+												</text>
+												<text id="45" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="1455.44678" y="31">45</tspan>
+												</text>
+												<text id="50" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="1605.44678" y="31">50</tspan>
+												</text>
+												<text id="55" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="1755.44678" y="31">55</tspan>
+												</text>
+												<g transform="translate(0.000000, 44.000000)" id="Line" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" stroke-width="6"></path>
+														<path d="M1,7 L1,37" stroke-width="3"></path>
+														<path d="M31,7 L31,37" stroke-width="3"></path>
+														<path d="M61,7 L61,37" stroke-width="3"></path>
+														<path d="M91,7 L91,37" stroke-width="3"></path>
+												</g>
+												<text id="0" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="113.223389" y="31">0</tspan>
+												</text>
+										</g>
+										<g id="Group">
+												<g transform="translate(150.000000, 44.000000)" id="Line" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" stroke-width="6"></path>
+														<path d="M1,7 L1,37" stroke-width="3"></path>
+														<path d="M31,7 L31,37" stroke-width="3"></path>
+														<path d="M61,7 L61,37" stroke-width="3"></path>
+														<path d="M91,7 L91,37" stroke-width="3"></path>
+												</g>
+												<g id="Group-Copy" transform="translate(300.000000, 44.000000)" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" id="Line" stroke-width="6"></path>
+														<path d="M1,7 L1,37" id="Line" stroke-width="3"></path>
+														<path d="M31,7 L31,37" id="Line" stroke-width="3"></path>
+														<path d="M61,7 L61,37" id="Line" stroke-width="3"></path>
+														<path d="M91,7 L91,37" id="Line" stroke-width="3"></path>
+												</g>
+												<g id="Group-Copy-2" transform="translate(450.000000, 44.000000)" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" id="Line" stroke-width="6"></path>
+														<path d="M1,7 L1,37" id="Line" stroke-width="3"></path>
+														<path d="M31,7 L31,37" id="Line" stroke-width="3"></path>
+														<path d="M61,7 L61,37" id="Line" stroke-width="3"></path>
+														<path d="M91,7 L91,37" id="Line" stroke-width="3"></path>
+												</g>
+												<g id="Group-Copy-3" transform="translate(600.000000, 44.000000)" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" id="Line" stroke-width="6"></path>
+														<path d="M1,7 L1,37" id="Line" stroke-width="3"></path>
+														<path d="M31,7 L31,37" id="Line" stroke-width="3"></path>
+														<path d="M61,7 L61,37" id="Line" stroke-width="3"></path>
+														<path d="M91,7 L91,37" id="Line" stroke-width="3"></path>
+												</g>
+												<g id="Group-Copy-3" transform="translate(750.000000, 44.000000)" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" id="Line" stroke-width="6"></path>
+														<path d="M1,7 L1,37" id="Line" stroke-width="3"></path>
+														<path d="M31,7 L31,37" id="Line" stroke-width="3"></path>
+														<path d="M61,7 L61,37" id="Line" stroke-width="3"></path>
+														<path d="M91,7 L91,37" id="Line" stroke-width="3"></path>
+												</g>
+												<g id="Group-Copy-3" transform="translate(900.000000, 44.000000)" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" id="Line" stroke-width="6"></path>
+														<path d="M1,7 L1,37" id="Line" stroke-width="3"></path>
+														<path d="M31,7 L31,37" id="Line" stroke-width="3"></path>
+														<path d="M61,7 L61,37" id="Line" stroke-width="3"></path>
+														<path d="M91,7 L91,37" id="Line" stroke-width="3"></path>
+												</g>
+												<g id="Group-Copy-3" transform="translate(1050.000000, 44.000000)" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" id="Line" stroke-width="6"></path>
+														<path d="M1,7 L1,37" id="Line" stroke-width="3"></path>
+														<path d="M31,7 L31,37" id="Line" stroke-width="3"></path>
+														<path d="M61,7 L61,37" id="Line" stroke-width="3"></path>
+														<path d="M91,7 L91,37" id="Line" stroke-width="3"></path>
+												</g>
+												<g id="Group-Copy-3" transform="translate(1200.000000, 44.000000)" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" id="Line" stroke-width="6"></path>
+														<path d="M1,7 L1,37" id="Line" stroke-width="3"></path>
+														<path d="M31,7 L31,37" id="Line" stroke-width="3"></path>
+														<path d="M61,7 L61,37" id="Line" stroke-width="3"></path>
+														<path d="M91,7 L91,37" id="Line" stroke-width="3"></path>
+												</g>
+												<g id="Group-Copy-3" transform="translate(1350.000000, 44.000000)" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" id="Line" stroke-width="6"></path>
+														<path d="M1,7 L1,37" id="Line" stroke-width="3"></path>
+														<path d="M31,7 L31,37" id="Line" stroke-width="3"></path>
+														<path d="M61,7 L61,37" id="Line" stroke-width="3"></path>
+														<path d="M91,7 L91,37" id="Line" stroke-width="3"></path>
+												</g>
+												<g id="Group-Copy-3" transform="translate(1500.000000, 44.000000)" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" id="Line" stroke-width="6"></path>
+														<path d="M1,7 L1,37" id="Line" stroke-width="3"></path>
+														<path d="M31,7 L31,37" id="Line" stroke-width="3"></path>
+														<path d="M61,7 L61,37" id="Line" stroke-width="3"></path>
+														<path d="M91,7 L91,37" id="Line" stroke-width="3"></path>
+												</g>
+												<g id="Group-Copy-3" transform="translate(1650.000000, 44.000000)" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" id="Line" stroke-width="6"></path>
+														<path d="M1,7 L1,37" id="Line" stroke-width="3"></path>
+														<path d="M31,7 L31,37" id="Line" stroke-width="3"></path>
+														<path d="M61,7 L61,37" id="Line" stroke-width="3"></path>
+														<path d="M91,7 L91,37" id="Line" stroke-width="3"></path>
+												</g>
+												<text id="5" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="264.223389" y="31">5</tspan>
+												</text>
+												<text id="10" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="405.446777" y="31">10</tspan>
+												</text>
+												<text id="15" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="555.446777" y="31">15</tspan>
+												</text>
+												<text id="20" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="705.446777" y="31">20</tspan>
+												</text>
+												<text id="25" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="855.446777" y="31">25</tspan>
+												</text>
+												<text id="30" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="1005.44678" y="31">30</tspan>
+												</text>
+												<text id="35" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="1155.44678" y="31">35</tspan>
+												</text>
+												<text id="40" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="1305.44678" y="31">40</tspan>
+												</text>
+												<text id="45" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="1455.44678" y="31">45</tspan>
+												</text>
+												<text id="50" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="1605.44678" y="31">50</tspan>
+												</text>
+												<text id="55" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="1755.44678" y="31">55</tspan>
+												</text>
+												<g transform="translate(0.000000, 44.000000)" id="Line" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" stroke-width="6"></path>
+														<path d="M1,7 L1,37" stroke-width="3"></path>
+														<path d="M31,7 L31,37" stroke-width="3"></path>
+														<path d="M61,7 L61,37" stroke-width="3"></path>
+														<path d="M91,7 L91,37" stroke-width="3"></path>
+												</g>
+												<text id="0" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="113.223389" y="31">0</tspan>
+												</text>
+										</g>
+										<g id="Group" transform="translate(3600.000000, 0.000000)">
+												<g transform="translate(150.000000, 44.000000)" id="Line" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" stroke-width="6"></path>
+														<path d="M1,7 L1,37" stroke-width="3"></path>
+														<path d="M31,7 L31,37" stroke-width="3"></path>
+														<path d="M61,7 L61,37" stroke-width="3"></path>
+														<path d="M91,7 L91,37" stroke-width="3"></path>
+												</g>
+												<g id="Group-Copy" transform="translate(300.000000, 44.000000)" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" id="Line" stroke-width="6"></path>
+														<path d="M1,7 L1,37" id="Line" stroke-width="3"></path>
+														<path d="M31,7 L31,37" id="Line" stroke-width="3"></path>
+														<path d="M61,7 L61,37" id="Line" stroke-width="3"></path>
+														<path d="M91,7 L91,37" id="Line" stroke-width="3"></path>
+												</g>
+												<g id="Group-Copy-2" transform="translate(450.000000, 44.000000)" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" id="Line" stroke-width="6"></path>
+														<path d="M1,7 L1,37" id="Line" stroke-width="3"></path>
+														<path d="M31,7 L31,37" id="Line" stroke-width="3"></path>
+														<path d="M61,7 L61,37" id="Line" stroke-width="3"></path>
+														<path d="M91,7 L91,37" id="Line" stroke-width="3"></path>
+												</g>
+												<g id="Group-Copy-3" transform="translate(600.000000, 44.000000)" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" id="Line" stroke-width="6"></path>
+														<path d="M1,7 L1,37" id="Line" stroke-width="3"></path>
+														<path d="M31,7 L31,37" id="Line" stroke-width="3"></path>
+														<path d="M61,7 L61,37" id="Line" stroke-width="3"></path>
+														<path d="M91,7 L91,37" id="Line" stroke-width="3"></path>
+												</g>
+												<g id="Group-Copy-3" transform="translate(750.000000, 44.000000)" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" id="Line" stroke-width="6"></path>
+														<path d="M1,7 L1,37" id="Line" stroke-width="3"></path>
+														<path d="M31,7 L31,37" id="Line" stroke-width="3"></path>
+														<path d="M61,7 L61,37" id="Line" stroke-width="3"></path>
+														<path d="M91,7 L91,37" id="Line" stroke-width="3"></path>
+												</g>
+												<g id="Group-Copy-3" transform="translate(900.000000, 44.000000)" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" id="Line" stroke-width="6"></path>
+														<path d="M1,7 L1,37" id="Line" stroke-width="3"></path>
+														<path d="M31,7 L31,37" id="Line" stroke-width="3"></path>
+														<path d="M61,7 L61,37" id="Line" stroke-width="3"></path>
+														<path d="M91,7 L91,37" id="Line" stroke-width="3"></path>
+												</g>
+												<g id="Group-Copy-3" transform="translate(1050.000000, 44.000000)" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" id="Line" stroke-width="6"></path>
+														<path d="M1,7 L1,37" id="Line" stroke-width="3"></path>
+														<path d="M31,7 L31,37" id="Line" stroke-width="3"></path>
+														<path d="M61,7 L61,37" id="Line" stroke-width="3"></path>
+														<path d="M91,7 L91,37" id="Line" stroke-width="3"></path>
+												</g>
+												<g id="Group-Copy-3" transform="translate(1200.000000, 44.000000)" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" id="Line" stroke-width="6"></path>
+														<path d="M1,7 L1,37" id="Line" stroke-width="3"></path>
+														<path d="M31,7 L31,37" id="Line" stroke-width="3"></path>
+														<path d="M61,7 L61,37" id="Line" stroke-width="3"></path>
+														<path d="M91,7 L91,37" id="Line" stroke-width="3"></path>
+												</g>
+												<g id="Group-Copy-3" transform="translate(1350.000000, 44.000000)" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" id="Line" stroke-width="6"></path>
+														<path d="M1,7 L1,37" id="Line" stroke-width="3"></path>
+														<path d="M31,7 L31,37" id="Line" stroke-width="3"></path>
+														<path d="M61,7 L61,37" id="Line" stroke-width="3"></path>
+														<path d="M91,7 L91,37" id="Line" stroke-width="3"></path>
+												</g>
+												<g id="Group-Copy-3" transform="translate(1500.000000, 44.000000)" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" id="Line" stroke-width="6"></path>
+														<path d="M1,7 L1,37" id="Line" stroke-width="3"></path>
+														<path d="M31,7 L31,37" id="Line" stroke-width="3"></path>
+														<path d="M61,7 L61,37" id="Line" stroke-width="3"></path>
+														<path d="M91,7 L91,37" id="Line" stroke-width="3"></path>
+												</g>
+												<g id="Group-Copy-3" transform="translate(1650.000000, 44.000000)" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" id="Line" stroke-width="6"></path>
+														<path d="M1,7 L1,37" id="Line" stroke-width="3"></path>
+														<path d="M31,7 L31,37" id="Line" stroke-width="3"></path>
+														<path d="M61,7 L61,37" id="Line" stroke-width="3"></path>
+														<path d="M91,7 L91,37" id="Line" stroke-width="3"></path>
+												</g>
+												<text id="5" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="264.223389" y="31">5</tspan>
+												</text>
+												<text id="10" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="405.446777" y="31">10</tspan>
+												</text>
+												<text id="15" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="555.446777" y="31">15</tspan>
+												</text>
+												<text id="20" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="705.446777" y="31">20</tspan>
+												</text>
+												<text id="25" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="855.446777" y="31">25</tspan>
+												</text>
+												<text id="30" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="1005.44678" y="31">30</tspan>
+												</text>
+												<text id="35" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="1155.44678" y="31">35</tspan>
+												</text>
+												<text id="40" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="1305.44678" y="31">40</tspan>
+												</text>
+												<text id="45" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="1455.44678" y="31">45</tspan>
+												</text>
+												<text id="50" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="1605.44678" y="31">50</tspan>
+												</text>
+												<text id="55" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="1755.44678" y="31">55</tspan>
+												</text>
+												<g transform="translate(0.000000, 44.000000)" id="Line" stroke="#FFFFFF" sketch:type="MSShapeGroup">
+														<path d="M121,0 L121,37" stroke-width="6"></path>
+														<path d="M1,7 L1,37" stroke-width="3"></path>
+														<path d="M31,7 L31,37" stroke-width="3"></path>
+														<path d="M61,7 L61,37" stroke-width="3"></path>
+														<path d="M91,7 L91,37" stroke-width="3"></path>
+												</g>
+												<text id="0" sketch:type="MSTextLayer" font-family="Open Sans" font-size="29" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+														<tspan x="113.223389" y="31">0</tspan>
+												</text>
+										</g>
+								</g>
+								<polygon id="Triangle-1" fill="#FFFFFF" sketch:type="MSShapeGroup" points="2694.5 95 2711 128 2678 128 "></polygon>
+						</g>
+				</g>
+		</svg>
+	</section>
+	<footer class="footer">
+		<div>
+			<ul class="footer__contact-list">
+				<li>
+					<a href="https://github.com/jcloutz" target="_blank" class="nav__button nav__button--white">
+						<i class="footer__contact-icon ion-social-github"></i>
+						<span class="footer__contact-button-text">Github</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/elevenStx" target="_blank" class="nav__button nav__button--white">
+						<i class="footer__contact-icon ion-social-twitter-outline"></i>
+						<span class="footer__contact-button-text">Twitter</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://codepen.io/elemental-shift/" target="_blank" class="nav__button nav__button--white">
+						<i class="footer__contact-icon ion-social-codepen"></i>
+						<span class="footer__contact-button-text">Codepen</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.freecodecamp.com/jcloutz" target="_blank" class="nav__button nav__button--white">
+						<i class="footer__contact-icon ion-ios-flame"></i>
+						<span class="footer__contact-button-text">freeCodeCamp</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.linkedin.com/in/jeremy-cloutier-68a25031" target="_blank" class="nav__button nav__button--white">
+						<i class="footer__contact-icon ion-social-linkedin-outline"></i>
+						<span class="footer__contact-button-text">LinkedIn</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+	
+</main>
+<!-- partial -->
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
